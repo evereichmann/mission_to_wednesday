@@ -1,0 +1,7 @@
+<h1 style="color: blue; font-family: courier;"> Our Esteemed Faculty</h1>
+<%= button_to "NEW FACULTY", {:action => "new"}, :method => "get" %>
+<% @scientists.each do |scientist| %>
+    <ul>
+     <li><%= link_to scientist.name, scientist_path(scientist) %></li>
+    </ul>
+<% end %>
