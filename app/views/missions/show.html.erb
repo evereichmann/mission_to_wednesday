@@ -1,0 +1,8 @@
+
+<h1 style="color: blue; font-family: courier;"><%= @mission.name %></h1>
+<h3 style="color: blue; font-family: courier;"><%= @mission.date %></h3>
+<h4 style="color: blue; font-family: courier;"><%= @mission.plan %></h4>
+
+<%= button_to "New Missions", {:action => "index"}, :method => "get" %>
+<%= button_to "EDIT", {:action => "edit"}, :method => "get" %>
+<%= button_to "DELETE MISSION", mission_path(@mission), :method => :delete, :data => {confirm: "Are you sure?"} %>

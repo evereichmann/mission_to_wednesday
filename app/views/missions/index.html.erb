@@ -1,0 +1,8 @@
+
+<h1 style="color: blue; font-family: courier;"> Very Important Missions</h1>
+<%= button_to "New Missions", {:action => "new"}, :method => "get" %>
+<% @missions.each do |mission| %>
+    <ul>
+     <li><%= link_to mission.name, mission_path(mission) %></li>
+    </ul>
+<% end %>
