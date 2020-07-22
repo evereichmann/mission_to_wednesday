@@ -1,6 +1,16 @@
 <h1 style="color: blue; font-family: courier;"><%= @scientist.name %></h1>
 <h3 style="color: blue; font-family: courier;"><%= @scientist.age %></h3>
 <h4 style="color: blue; font-family: courier;"><%= @scientist.job %></h4>
+<br/>
+<h2 style="color: blue; font-family: courier;">My Missions</h2>
+<% @scientist.missions.each do |mission| %>
+<ul>
+<li><%= link_to mission.name, mission_path(mission) %></li>
+</ul>
+<% end %>
+
+
+
 
 <%= button_to "FACULTY PAGE", {:action => "index"}, :method => "get" %>
 <%= button_to "EDIT", {:action => "edit"}, :method => "get" %>

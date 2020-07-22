@@ -4,6 +4,6 @@
 <%= f.label :age %>
 <%= f.number_field :age %>
 <%= f.label :job %>
-<%= f.text_field :job %>
+<%= f.collection_select :job, @scientists, :job, :job %>
 <%= f.submit %>
 <% end %>
