@@ -1,10 +1,10 @@
 class PlanetsController < ApplicationController
     #index
     def index
-        @missions = Mission.all
+        @planets = Planet.all
     end    
     #show
     def show
-        @mission = Mission.find(params[:id])  
+        @planet = Planet.find(params[:id])  
     end    
 end
