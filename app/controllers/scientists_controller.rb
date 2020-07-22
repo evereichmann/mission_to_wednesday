@@ -9,6 +9,7 @@ class ScientistsController < ApplicationController
     end    
     #new
     def new
+        @scientists = Scientist.all
         @scientist = Scientist.new
     end    
     #create
@@ -18,6 +19,7 @@ class ScientistsController < ApplicationController
     end    
     #edit
     def edit
+        @scientists = Scientist.all
         @scientist = Scientist.find(params[:id])
     end    
     #update
